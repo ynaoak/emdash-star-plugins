@@ -1,4 +1,5 @@
 export const PLUGIN_ID = "email-resend";
+export const PLUGIN_VERSION = "1.0.1";
 
 /**
  * Mirror of EmDash's core `EmailMessage` shape. Defined locally because the

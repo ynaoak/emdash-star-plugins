@@ -1,6 +1,6 @@
 {
 	"name": "@emdash-star/plugin-email-resend",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Deliver EmDash email through Resend — a transport provider for the email:deliver hook (the WP Mail SMTP equivalent for EmDash).",
 	"type": "module",
 	"main": "src/index.ts",

@@ -17,6 +17,7 @@ import { z } from "astro/zod";
 import { assertConfigured, buildStatus, readSettings, saveSettings } from "./config.js";
 import { deliverViaResend } from "./resend.js";
 import type { EmailDeliverEvent, EmailMessage } from "./types.js";
+import { PLUGIN_ID, PLUGIN_VERSION } from "./types.js";
 
 async function sendViaResend(ctx: PluginContext, message: EmailMessage) {
 	if (!ctx.http) throw new Error("network:fetch capability unavailable — cannot reach Resend.");
@@ -25,6 +26,10 @@ async function sendViaResend(ctx: PluginContext, message: EmailMessage) {
 }
 
 export default definePlugin({
+	id: PLUGIN_ID,
+	version: PLUGIN_VERSION,
+	capabilities: ["email:provide", "network:fetch"],
+	allowedHosts: ["api.resend.com"],
 	hooks: {
 		"email:deliver": {
 			// Exactly one provider delivers; this claims that slot.
