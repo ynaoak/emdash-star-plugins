@@ -1,0 +1,26 @@
+{
+	"name": "@emdash-star/plugin-broken-link-checker",
+	"version": "1.0.0",
+	"description": "Crawl EmDash content for broken links (4xx/5xx/unreachable) on a schedule and report them — a port of WordPress' Broken Link Checker.",
+	"type": "module",
+	"main": "src/index.ts",
+	"exports": {
+		".": "./src/index.ts",
+		"./sandbox": "./src/sandbox-entry.ts"
+	},
+	"files": [
+		"src"
+	],
+	"keywords": [
+		"emdash",
+		"cms",
+		"plugin",
+		"broken-link-checker",
+		"links",
+		"seo"
+	],
+	"license": "MIT",
+	"peerDependencies": {
+		"emdash": ">=0.15.0"
+	}
+}
